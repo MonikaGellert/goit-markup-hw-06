@@ -736,6 +736,8 @@ figure {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: white;
   cursor: pointer;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform;
 }
 
 .is-hidden {
@@ -1016,6 +1018,7 @@ Input:checked {
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .sign-in {
   display: flex;
