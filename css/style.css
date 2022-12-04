@@ -413,11 +413,6 @@ figure {
   margin-bottom: 30px;
   margin-left: 20px;
 }
-.icon_box:focus,
-.icon_box:hover {
-  border: 1px solid var(--main-underline-color);
-  fill: #2196f3;
-}
 .icons {
   margin: 25px 100px;
 }
@@ -522,7 +517,6 @@ figure {
   transition: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill;
-
   text-decoration: none;
   display: flex;
   justify-content: center;
@@ -533,7 +527,7 @@ figure {
 }
 
 .client_box:hover,
-.client_box:focus-within {
+.client_box:focus {
   border-radius: 4px;
   border-color: var(--main-underline-color);
   border-style: solid;
@@ -706,6 +700,9 @@ figure {
   top: 0;
   left: 0;
   position: fixed;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, box-shadow;
 }
 
 .modal_window {
@@ -745,6 +742,8 @@ figure {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, box-shadow;
 }
 .form {
   margin-left: 40px;
@@ -989,7 +988,7 @@ Input:checked {
   color: rgba(255, 255, 255, 0.6);
   outline: none;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: transform, border;
+  transition-property: transform, border, background-color;
   margin-right: 8px;
 }
 
